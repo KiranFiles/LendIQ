@@ -65,7 +65,7 @@ function signalStrength(key: string, val: number | boolean): "high" | "mid" | "l
 }
 
 const strengthStyle = {
-  high: { bar: "bg-emerald-500", text: "text-emerald-600", label: "Strong" },
+  high: { bar: "bg-idbi-500", text: "text-idbi-600", label: "Strong" },
   mid: { bar: "bg-amber-400", text: "text-amber-600", label: "Moderate" },
   low: { bar: "bg-gray-300", text: "text-gray-400", label: "Weak" },
 };
@@ -88,8 +88,8 @@ export default function CustomerDetailDrawer({ customer, loading, onClose }: Pro
             <div
               className={`px-5 py-4 ${
                 customer.is_surfaced_lead
-                  ? "bg-gradient-to-r from-red-600 to-orange-500"
-                  : "bg-gradient-to-r from-gray-700 to-gray-500"
+                  ? "bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700"
+                  : "bg-gradient-to-br from-gray-600 to-gray-500"
               } text-white`}
             >
               <div className="flex items-start justify-between">
@@ -220,7 +220,7 @@ export default function CustomerDetailDrawer({ customer, loading, onClose }: Pro
             <div className="sticky bottom-0 bg-white border-t border-gray-100 px-5 py-3">
               <button
                 onClick={onClose}
-                className="w-full text-sm text-gray-500 hover:text-gray-800 font-medium transition-colors"
+                className="w-full text-sm text-brand-500 hover:text-brand-700 font-semibold transition-colors"
               >
                 Close Profile
               </button>

@@ -25,9 +25,15 @@ export default function Analytics() {
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-6">
       <div>
-        <h1 className="text-xl font-semibold text-ink-900">Model & Outcome Analytics</h1>
-        <p className="text-sm text-ink-500 mt-1">
+        <div className="flex items-center gap-2 mb-1">
+          <span className="inline-block w-1 h-6 rounded-full bg-brand-500"></span>
+          <h1 className="text-xl font-bold text-ink-900">Model &amp; Outcome Analytics</h1>
+        </div>
+        <p className="text-sm text-ink-500 ml-3 mt-0.5">
           Evidence that the solution meets the expected outcome in the problem statement.
+        </p>
+        <p className="ml-3 mt-1 text-[10px] font-semibold text-brand-500 uppercase tracking-widest">
+          IDBI Bank · AI-Powered Lead Intelligence
         </p>
       </div>
 

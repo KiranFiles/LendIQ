@@ -84,10 +84,10 @@ function PriorityBadge({ score }: { score: number }) {
   let badgeClass = "bg-gray-100 text-gray-500";
   let label = `${pct}`;
   if (pct >= 75) {
-    badgeClass = "bg-emerald-100 text-emerald-700";
+    badgeClass = "bg-brand-100 text-brand-600";
     label = `🔥 ${pct}`;
   } else if (pct >= 55) {
-    badgeClass = "bg-amber-100 text-amber-700";
+    badgeClass = "bg-idbi-100 text-idbi-600";
     label = `✅ ${pct}`;
   }
 
@@ -238,8 +238,8 @@ export default function LeadTable({ leads, onSelect, selectedId }: LeadTableProp
                 <tr
                   key={lead.customer_id}
                   onClick={() => onSelect(lead.customer_id)}
-                  className={`cursor-pointer hover:bg-slate-50 transition-colors ${
-                    selectedId === lead.customer_id ? "bg-orange-50" : ""
+                  className={`cursor-pointer hover:bg-brand-50 transition-colors ${
+                    selectedId === lead.customer_id ? "bg-brand-50 border-l-2 border-brand-500" : ""
                   }`}
                 >
                   {/* Customer */}
@@ -323,12 +323,12 @@ export default function LeadTable({ leads, onSelect, selectedId }: LeadTableProp
 
                   {/* Intent bar */}
                   <td className="px-4 py-3">
-                    <MiniBar pct={Math.round(lead.intent_score * 100)} color="#f59e0b" />
+                    <MiniBar pct={Math.round(lead.intent_score * 100)} color="#F58220" />
                   </td>
 
                   {/* Capacity bar */}
                   <td className="px-4 py-3">
-                    <MiniBar pct={Math.round(lead.repayment_capacity_score * 100)} color="#10b981" />
+                    <MiniBar pct={Math.round(lead.repayment_capacity_score * 100)} color="#00836C" />
                   </td>
 
                   {/* Priority badge */}

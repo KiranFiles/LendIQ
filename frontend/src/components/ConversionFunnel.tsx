@@ -21,7 +21,7 @@ export default function ConversionFunnel({ summary }: Props) {
           <XAxis dataKey="stage" fontSize={11} />
           <YAxis fontSize={11} />
           <Tooltip />
-          <Bar dataKey="count" fill="#d94530" radius={[4, 4, 0, 0]} barSize={60} />
+          <Bar dataKey="count" fill="#00836C" radius={[4, 4, 0, 0]} barSize={60} />
         </BarChart>
       </ResponsiveContainer>
     </div>

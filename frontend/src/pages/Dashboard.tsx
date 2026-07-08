@@ -64,21 +64,28 @@ export default function Dashboard() {
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
-      <div className="flex items-start justify-between mb-4">
+      {/* IDBI Bank branded page header */}
+      <div className="flex items-start justify-between mb-6">
         <div>
-          <h1 className="text-xl font-semibold text-ink-900">Retail Lending Lead Pipeline</h1>
-          <p className="text-sm text-ink-500 mt-1">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="inline-block w-1 h-6 rounded-full bg-brand-500"></span>
+            <h1 className="text-xl font-bold text-ink-900">Retail Lending Lead Pipeline</h1>
+          </div>
+          <p className="text-sm text-ink-500 ml-3">
             Eligible, income-verified, genuinely interested prospects ranked for RM outreach.
+          </p>
+          <p className="ml-3 mt-1 text-[10px] font-semibold text-brand-500 uppercase tracking-widest">
+            IDBI Bank · AI-Powered Lead Intelligence
           </p>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <label className="text-[11px] text-gray-400 font-medium uppercase tracking-wide">
+          <label className="text-[11px] text-gray-400 font-semibold uppercase tracking-wide">
             Filter by product
           </label>
           <select
             value={productFilter}
             onChange={(e) => setProductFilter(e.target.value as LoanType | "all")}
-            className="border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white shadow-sm"
+            className="border-2 border-brand-200 rounded-lg px-3 py-2 text-sm bg-white shadow-sm focus:outline-none focus:border-brand-500 transition-colors"
           >
             {PRODUCT_OPTIONS.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -91,14 +98,14 @@ export default function Dashboard() {
 
       {/* Context banner when a product filter is active */}
       {productFilter !== "all" && !loading && (
-        <div className="mb-4 flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-xl px-4 py-3">
+        <div className="mb-4 flex items-start gap-3 bg-idbi-50 border border-idbi-100 rounded-xl px-4 py-3">
           <span className="text-lg mt-0.5">ℹ️</span>
           <div>
-            <p className="text-sm font-semibold text-blue-800">
+            <p className="text-sm font-semibold text-idbi-700">
               {leads.length} lead{leads.length !== 1 ? "s" : ""} eligible for{" "}
               {PRODUCT_LABEL[productFilter]}
             </p>
-            <p className="text-xs text-blue-600 mt-0.5">
+            <p className="text-xs text-idbi-600 mt-0.5">
               {productFilter === "auto_loan" ? (
                 <>
                   Auto Loan has the <strong>broadest eligibility</strong> (lowest income floor ₹20k, lowest bureau

@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen items-start">
         <Sidebar />
         <main className="flex-1">
           <Routes>
